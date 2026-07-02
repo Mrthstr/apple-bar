@@ -48,6 +48,31 @@ html, body {
 .company-block {
   display: flex;
   align-items: stretch;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid #9d9d9d;
+}
+
+.company-text {
+  flex: 1;
+  padding: 48px 32px;
+  background: #e8e8e8;
+}
+
+.company-logo {
+  flex: 0 0 45%;
+  background: linear-gradient(135deg, #222222 0%, #0d0d0d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 56px 40px;
+}
+
+@media (max-width: 768px) {
+  .company-block { flex-direction: column; }
+  .company-logo { flex: none; padding: 40px 24px; }
 }
 
 .three-col {
