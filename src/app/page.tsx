@@ -100,7 +100,7 @@ export default function Home() {
           <div style={{
             background: "linear-gradient(135deg, #222222 0%, #0d0d0d 100%)",
             borderRadius: 20, padding: "56px 40px",
-            display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 300,
+            display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, alignSelf: "stretch",
           }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo/logo-transparent.png" alt="applebar" style={{ height: 60, objectFit: "contain" }} />
