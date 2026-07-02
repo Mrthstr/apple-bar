@@ -25,7 +25,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <Link href={`/product/${product.id}`} style={{ textDecoration: "none" }}>
-    <div style={{
+    <div className="product-card" style={{
       background: "#fff", padding: "22px 20px 18px", cursor: "pointer",
       transition: "background .15s",
     }}>
@@ -39,7 +39,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </span>
       )}
 
-      <div style={{
+      <div className="card-img" style={{
         width: "100%", aspectRatio: "1", display: "flex",
         alignItems: "center", justifyContent: "center",
         background: "linear-gradient(145deg, #f5eef0, #ede5e8)",
@@ -57,15 +57,15 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
       </div>
 
-      <div style={{ fontSize: 14, fontWeight: 600, color: "#0d0d1a", marginBottom: 5 }}>{product.name}</div>
-      <div style={{ fontSize: 12, color: "#bbb", marginBottom: 14 }}>{product.subtitle}</div>
+      <div className="card-name" style={{ fontSize: 14, fontWeight: 600, color: "#0d0d1a", marginBottom: 5 }}>{product.name}</div>
+      <div className="card-sub" style={{ fontSize: 12, color: "#bbb", marginBottom: 14 }}>{product.subtitle}</div>
 
-      <div style={{ display: "flex", alignItems: "baseline" }}>
-        <span style={{ fontSize: 20, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d1a" }}>
+      <div style={{ display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: 4 }}>
+        <span className="card-price" style={{ fontSize: 20, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d1a" }}>
           {product.price.toLocaleString("ru-RU")} ₽
         </span>
         {product.oldPrice && (
-          <span style={{ fontSize: 12, color: "#ccc", textDecoration: "line-through", marginLeft: 8 }}>
+          <span className="card-old-price" style={{ fontSize: 12, color: "#ccc", textDecoration: "line-through" }}>
             {product.oldPrice.toLocaleString("ru-RU")} ₽
           </span>
         )}
@@ -75,12 +75,12 @@ export default function ProductCard({ product }: { product: Product }) {
         display: "flex", alignItems: "center", justifyContent: "space-between",
         marginTop: 14, paddingTop: 14, borderTop: "1px solid #f0f0f4",
       }}>
-        <div style={{ fontSize: 11, color: "#bbb" }}>+{bonus} бонусов</div>
-        <button style={{
+        <div className="card-bonus" style={{ fontSize: 11, color: "#bbb" }}>+{bonus} бонусов</div>
+        <button className="card-btn" style={{
           width: 34, height: 34, borderRadius: 8,
           background: "#6b1428", color: "#fff", fontSize: 22,
           display: "flex", alignItems: "center", justifyContent: "center",
-          border: "none", cursor: "pointer",
+          border: "none", cursor: "pointer", flexShrink: 0,
         }}>+</button>
       </div>
     </div>

@@ -96,7 +96,7 @@ export default function HeroCarousel() {
   const s = slides[current];
 
   return (
-    <div style={{ position: "relative", height: 560, overflow: "hidden", background: s.bg, transition: "background 0.4s" }}>
+    <div className="hero-carousel" style={{ position: "relative", height: 560, overflow: "hidden", background: s.bg, transition: "background 0.4s" }}>
       {/* Image */}
       {s.image && (
         // eslint-disable-next-line @next/next/no-img-element
@@ -112,7 +112,7 @@ export default function HeroCarousel() {
       <div style={{
         position: "absolute", inset: 0, zIndex: 3,
         display: "flex", flexDirection: "column", justifyContent: "center",
-        padding: "0 80px",
+        padding: "0 clamp(20px, 6vw, 80px)",
         opacity: animating ? 0 : 1,
         transform: animating ? "translateY(8px)" : "translateY(0)",
         transition: "opacity 0.3s, transform 0.3s",
@@ -126,7 +126,7 @@ export default function HeroCarousel() {
         </div>
 
         <h1 style={{
-          fontSize: 48, fontWeight: 600, lineHeight: 1.1,
+          fontSize: "clamp(28px, 8vw, 48px)", fontWeight: 600, lineHeight: 1.1,
           letterSpacing: "-0.02em", color: "#fff",
           marginBottom: 16, whiteSpace: "pre-line",
           textShadow: "0 2px 20px rgba(0,0,0,0.3)",

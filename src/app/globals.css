@@ -120,9 +120,22 @@ html, body {
   /* show mobile burger */
   .mobile-nav-right { display: flex !important; }
 
+  /* hero */
+  .hero-carousel { height: 420px !important; }
+
   /* catalog */
   .catalog-section { padding: 20px 12px 0 !important; }
   .catalog-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0 !important; }
+
+  /* product card */
+  .product-card { padding: 12px 10px 10px !important; }
+  .product-card .card-img { margin-bottom: 10px !important; }
+  .product-card .card-name { font-size: 11px !important; margin-bottom: 3px !important; }
+  .product-card .card-sub { font-size: 10px !important; margin-bottom: 8px !important; }
+  .product-card .card-price { font-size: 14px !important; }
+  .product-card .card-old-price { font-size: 10px !important; }
+  .product-card .card-bonus { font-size: 10px !important; }
+  .product-card .card-btn { width: 28px !important; height: 28px !important; font-size: 16px !important; }
 
   /* trade-in */
   .trade-in-block { flex-direction: column !important; }
