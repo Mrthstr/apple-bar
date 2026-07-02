@@ -50,8 +50,8 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "ip17pro-1", name: "iPhone 17 Pro", subtitle: "128 GB · Desert Titanium",
     price: 119900, oldPrice: 149990, badge: "new", cat: "iPhone",
-    image: "/products/iphone17pro/82253206.png",
-    images: ["/products/iphone17pro/82253206.png", "/products/iphone17pro/65232426.png", "/products/iphone17pro/78775858.png"],
+    image: "/products/iphone17pro/66111634.png",
+    images: ["/products/iphone17pro/66111634.png", "/products/iphone17pro/88598247.png"],
     description: "iPhone 17 Pro с чипом A18 Pro и профессиональной камерой. Титановый корпус, Dynamic Island, ProMotion 120 Гц.",
     specs: [
       { label: "Экран", value: "6.3\" Super Retina XDR, 120 Гц" },
@@ -61,9 +61,8 @@ export const ALL_PRODUCTS: ProductItem[] = [
       { label: "Аккумулятор", value: "до 27 ч видео" },
     ],
     colors: [
-      { label: "Desert Titanium", hex: "#c8a882", image: "/products/iphone17pro/82253206.png" },
-      { label: "Black Titanium",  hex: "#2d2926", image: "/products/iphone17pro/65232426.png" },
-      { label: "White Titanium",  hex: "#e8e4df", image: "/products/iphone17pro/78775858.png" },
+      { label: "Desert Titanium", hex: "#c8a882", image: "/products/iphone17pro/66111634.png" },
+      { label: "Black Titanium",  hex: "#2d2926", image: "/products/iphone17pro/88598247.png" },
     ],
     storages: [
       { label: "128 GB", price: 119900, oldPrice: 149990 },
@@ -102,8 +101,8 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "ip17e-1", name: "iPhone 16e", subtitle: "128 GB · Black",
     price: 59900, oldPrice: 79990, badge: "new", cat: "iPhone",
-    image: "/products/iphone17e/13 black.jpg",
-    images: ["/products/iphone17e/13 black.jpg", "/products/iphone17e/13 dawn.jpg"],
+    image: "/products/iphone17e/w9lodi6cvgqp70cw7fjv7zeuczg4zxvy.jpg",
+    images: ["/products/iphone17e/w9lodi6cvgqp70cw7fjv7zeuczg4zxvy.jpg"],
     description: "Доступный iPhone с мощным чипом A16 Bionic. Компактный, быстрый, с поддержкой Apple Intelligence.",
     specs: [
       { label: "Экран", value: "6.1\" Super Retina XDR, 60 Гц" },
@@ -113,8 +112,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
       { label: "Аккумулятор", value: "до 26 ч видео" },
     ],
     colors: [
-      { label: "Black", hex: "#1c1c1e", image: "/products/iphone17e/13 black.jpg" },
-      { label: "Dawn",  hex: "#e8e0d5", image: "/products/iphone17e/13 dawn.jpg" },
+      { label: "Black", hex: "#1c1c1e", image: "/products/iphone17e/w9lodi6cvgqp70cw7fjv7zeuczg4zxvy.jpg" },
     ],
     storages: [
       { label: "128 GB", price: 59900, oldPrice: 79990 },
