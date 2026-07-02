@@ -175,7 +175,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
             { title: "Рассрочка", desc: "до 36 месяцев" },
             { title: "Оригинал", desc: "Без пробега по РФ" },
           ].map(({ title, desc }) => (
-            <div key={title} style={{ background: "#fff", border: "1px solid #e8e0e3", borderRadius: 10, padding: "12px 16px" }}>
+            <div key={title} style={{ background: "#f2f2f2", border: "1px solid #e0e0e3", borderRadius: 10, padding: "12px 16px" }}>
               <div style={{ fontSize: 12, color: "#bbb", marginBottom: 3 }}>{title}</div>
               <div style={{ fontSize: 13, fontWeight: 600, color: "#0d0d1a" }}>{desc}</div>
             </div>

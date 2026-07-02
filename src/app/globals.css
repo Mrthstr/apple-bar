@@ -81,9 +81,9 @@ html, body {
   align-items: stretch;
   border-radius: 14px;
   overflow: hidden;
-  background: #fff;
+  background: #f2f2f2;
   min-height: 160px;
-  border: 1px solid #e8e0e3;
+  border: 1px solid #e0e0e5;
 }
 
 .bonus-photo {

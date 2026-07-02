@@ -31,7 +31,7 @@ export default function Home() {
           </div>
           {/* Button side */}
           <div className="trade-in-cta">
-            <button style={{ background: "#fff", color: "#111111", border: "none", padding: "14px 24px", borderRadius: 10, fontSize: 13, fontFamily: "inherit", fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap", width: "100%" }}>
+            <button style={{ background: "#f2f2f2", color: "#111111", border: "none", padding: "14px 24px", borderRadius: 10, fontSize: 13, fontFamily: "inherit", fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap", width: "100%" }}>
               Оценить устройство
             </button>
           </div>
@@ -66,7 +66,7 @@ export default function Home() {
             { title: "Рассрочка до 36 месяцев", desc: "Без переплат и скрытых комиссий. Быстрое одобрение онлайн." },
             { title: "2–10 рабочих дней",        desc: "Доставка под заказ из Кореи, Японии и США." },
           ].map(({ title, desc }) => (
-            <div key={title} style={{ background: "#fff", padding: 30 }}>
+            <div key={title} style={{ background: "#f2f2f2", padding: 30 }}>
               <div style={{ fontSize: 14, fontWeight: 600, color: "#0d0d1a", marginBottom: 8 }}>{title}</div>
               <div style={{ fontSize: 13, color: "#999", lineHeight: 1.7 }}>{desc}</div>
             </div>
@@ -74,7 +74,7 @@ export default function Home() {
         </div>
 
         {/* ── О КОМПАНИИ ── */}
-        <div className="two-col page-section" style={{ background: "#fff", border: "1px solid #e8e0e3", borderRadius: 14, padding: "48px 32px" }}>
+        <div className="two-col page-section" style={{ background: "#f2f2f2", border: "1px solid #e8e0e3", borderRadius: 14, padding: "48px 32px" }}>
           <div>
             <div style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#bbb", marginBottom: 12 }}>О компании</div>
             <h2 style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d1a", marginBottom: 20 }}>bapplebar</h2>
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
 
         {/* ── FOOTER ── */}
-        <footer style={{ marginTop: 32, borderTop: "1px solid #e8e0e3", background: "#fff" }}>
+        <footer style={{ marginTop: 32, borderTop: "1px solid #e8e0e3", background: "#f2f2f2" }}>
           <div className="footer-inner" style={{ padding: "24px 48px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontSize: 16, fontWeight: 600, color: "#0d0d1a" }}>bapplebar</span>
           <div className="footer-nav" style={{ display: "flex", gap: 20, fontSize: 13 }}>

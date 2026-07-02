@@ -26,7 +26,7 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link href={`/product/${product.id}`} style={{ textDecoration: "none" }}>
     <div className="product-card" style={{
-      background: "#fff", padding: "22px 20px 18px", cursor: "pointer",
+      background: "#f2f2f2", padding: "22px 20px 18px", cursor: "pointer",
       transition: "background .15s",
     }}>
       {product.badge && (
