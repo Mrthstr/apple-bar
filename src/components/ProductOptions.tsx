@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import type { ColorOption, StorageOption, SimOption } from "@/lib/products";
@@ -33,7 +33,7 @@ export default function ProductOptions({ colors, storages, simTypes, basePrice, 
     <div>
       {/* Price (динамическая) */}
       <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 6 }}>
-        <span style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.03em", color: "#0d0d1a" }}>
+        <span style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.03em", color: "#0d0d0d" }}>
           {price.toLocaleString("ru-RU")} ₽
         </span>
         {oldPrice && (
@@ -42,13 +42,13 @@ export default function ProductOptions({ colors, storages, simTypes, basePrice, 
           </span>
         )}
       </div>
-      <div style={{ fontSize: 13, color: "#6b1428", marginBottom: 28 }}>+{bonus} бонусов за покупку</div>
+      <div style={{ fontSize: 13, color: "#0d0d0d", marginBottom: 28 }}>+{bonus} бонусов за покупку</div>
 
       {/* Цвет */}
       {colors && colors.length > 0 && (
         <div style={{ marginBottom: 24 }}>
           <div style={{ fontSize: 13, color: "#999", marginBottom: 10 }}>
-            Цвет: <span style={{ color: "#0d0d1a", fontWeight: 600 }}>{colors[activeColor].label}</span>
+            Цвет: <span style={{ color: "#0d0d0d", fontWeight: 600 }}>{colors[activeColor].label}</span>
           </div>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             {colors.map((c, i) => (
@@ -59,8 +59,8 @@ export default function ProductOptions({ colors, storages, simTypes, basePrice, 
                 style={{
                   width: 36, height: 36, borderRadius: "50%",
                   background: c.hex,
-                  border: `3px solid ${i === activeColor ? "#6b1428" : "transparent"}`,
-                  outline: `2px solid ${i === activeColor ? "#6b1428" : "#e0d8db"}`,
+                  border: `3px solid ${i === activeColor ? "#0d0d0d" : "transparent"}`,
+                  outline: `2px solid ${i === activeColor ? "#0d0d0d" : "#e0d8db"}`,
                   cursor: "pointer", padding: 0,
                   transition: "outline .15s, border .15s",
                 }}
@@ -82,9 +82,9 @@ export default function ProductOptions({ colors, storages, simTypes, basePrice, 
                 style={{
                   padding: "8px 18px", borderRadius: 8, fontSize: 13,
                   fontFamily: "inherit", fontWeight: 600,
-                  background: i === activeStorage ? "#6b1428" : "#fff",
+                  background: i === activeStorage ? "#0d0d0d" : "#e0e0e0",
                   color: i === activeStorage ? "#fff" : "#555",
-                  border: `1px solid ${i === activeStorage ? "#6b1428" : "#e0d8db"}`,
+                  border: `1px solid ${i === activeStorage ? "#0d0d0d" : "#e0d8db"}`,
                   cursor: "pointer", transition: "all .15s",
                 }}
               >
@@ -107,9 +107,9 @@ export default function ProductOptions({ colors, storages, simTypes, basePrice, 
                 style={{
                   padding: "8px 18px", borderRadius: 8, fontSize: 13,
                   fontFamily: "inherit", fontWeight: 600,
-                  background: activeSim === sim ? "#0d0d1a" : "#fff",
+                  background: activeSim === sim ? "#0d0d0d" : "#e0e0e0",
                   color: activeSim === sim ? "#fff" : "#555",
-                  border: `1px solid ${activeSim === sim ? "#0d0d1a" : "#e0d8db"}`,
+                  border: `1px solid ${activeSim === sim ? "#0d0d0d" : "#e0d8db"}`,
                   cursor: "pointer", transition: "all .15s",
                 }}
               >
@@ -122,3 +122,4 @@ export default function ProductOptions({ colors, storages, simTypes, basePrice, 
     </div>
   );
 }
+

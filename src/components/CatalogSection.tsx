@@ -51,3 +51,4 @@ export default function CatalogSection({ products }: { products: ProductWithCat[
   );
 }
 
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -8,7 +8,7 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
   if (images.length === 0) {
     return (
       <div style={{
-        background: "linear-gradient(145deg, #f5eef0, #ede5e8)",
+        background: "linear-gradient(145deg, #e8e8e8, #e0e0e0)",
         borderRadius: 20, aspectRatio: "1",
         display: "flex", alignItems: "center", justifyContent: "center",
         fontSize: 64, color: "#ddd",
@@ -20,7 +20,7 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
     <div>
       {/* Main image */}
       <div style={{
-        background: "linear-gradient(145deg, #f5eef0, #ede5e8)",
+        background: "linear-gradient(145deg, #e8e8e8, #e0e0e0)",
         borderRadius: 20, overflow: "hidden", aspectRatio: "1",
         display: "flex", alignItems: "center", justifyContent: "center",
         marginBottom: 12,
@@ -42,8 +42,8 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
               onClick={() => setActive(i)}
               style={{
                 width: 72, height: 72, borderRadius: 10, overflow: "hidden",
-                border: `2px solid ${i === active ? "#6b1428" : "#e8e0e3"}`,
-                background: "linear-gradient(145deg, #f5eef0, #ede5e8)",
+                border: `2px solid ${i === active ? "#0d0d0d" : "#9d9d9d"}`,
+                background: "linear-gradient(145deg, #e8e8e8, #e0e0e0)",
                 cursor: "pointer", padding: 4, flexShrink: 0,
               }}
             >
@@ -56,3 +56,4 @@ export default function ProductGallery({ images, name }: { images: string[]; nam
     </div>
   );
 }
+
