@@ -118,10 +118,16 @@ export default function Home() {
         {/* ── FOOTER ── */}
         <footer style={{ marginTop: 32, borderTop: "1px solid #9d9d9d", background: "#e8e8e8" }}>
           <div className="footer-inner" style={{ padding: "24px 48px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <span style={{ fontSize: 16, fontWeight: 600, color: "#0d0d0d" }}>applebar ✓</span>
+          <span style={{ fontSize: 16, fontWeight: 600, color: "#0d0d0d" }}>applebar</span>
           <div className="footer-nav" style={{ display: "flex", gap: 20, fontSize: 13 }}>
-            {["Доставка", "Гарантия", "Trade-In", "О магазине", "Контакты"].map(l => (
-              <a key={l} href="#" style={{ color: "#bbb", textDecoration: "none" }}>{l}</a>
+            {[
+              { label: "Каталог", href: "/catalog" },
+              { label: "Доставка", href: "/delivery" },
+              { label: "Trade-In", href: "/trade-in" },
+              { label: "Ремонт", href: "/repair" },
+              { label: "О магазине", href: "/about" },
+            ].map(({ label, href }) => (
+              <a key={label} href={href} style={{ color: "#bbb", textDecoration: "none" }}>{label}</a>
             ))}
           </div>
           <div style={{ display: "flex", gap: 10 }}>
