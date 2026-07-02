@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useCallback } from "react";
 
@@ -138,7 +138,7 @@ export default function HeroCarousel() {
 
         <div>
           <button style={{
-            background: "#fff", color: "#0d0d1a",
+            background: "#fff", color: "#0d0d0d",
             border: "none", padding: "14px 28px", borderRadius: 10,
             fontSize: 13, fontFamily: "inherit", fontWeight: 600, cursor: "pointer",
           }}>
@@ -180,3 +180,4 @@ export default function HeroCarousel() {
     </div>
   );
 }
+

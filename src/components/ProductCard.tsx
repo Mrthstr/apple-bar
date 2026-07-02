@@ -1,4 +1,4 @@
-export type Product = {
+﻿export type Product = {
   id: string;
   name: string;
   subtitle: string;
@@ -10,8 +10,8 @@ export type Product = {
 
 const badgeStyles: Record<string, React.CSSProperties> = {
   hot:  { background: "#0c0c12", color: "#fff" },
-  new:  { background: "#eef0f8", color: "#5560aa", border: "1px solid #d8dcf0" },
-  used: { background: "#f4f4f6", color: "#999",    border: "1px solid #e4e4e8" },
+  new:  { background: "#222222", color: "#9d9d9d", border: "1px solid #5d5d5f" },
+  used: { background: "#5d5d5f", color: "#e8e8e8", border: "1px solid #9d9d9d" },
 };
 
 const badgeLabels: Record<string, string> = {
@@ -26,7 +26,7 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link href={`/product/${product.id}`} style={{ textDecoration: "none" }}>
     <div className="product-card" style={{
-      background: "#f2f2f2", padding: "22px 20px 18px", cursor: "pointer",
+      background: "#e8e8e8", padding: "22px 20px 18px", cursor: "pointer",
       transition: "background .15s",
     }}>
       {product.badge && (
@@ -42,7 +42,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="card-img" style={{
         width: "100%", aspectRatio: "1", display: "flex",
         alignItems: "center", justifyContent: "center",
-        background: "linear-gradient(145deg, #f2f2f2, #e8e8e8)",
+        background: "linear-gradient(145deg, #e8e8e8, #e8e8e8)",
         borderRadius: 12, marginBottom: 18, overflow: "hidden",
       }}>
         {product.image ? (
@@ -57,11 +57,11 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
       </div>
 
-      <div className="card-name" style={{ fontSize: 14, fontWeight: 600, color: "#0d0d1a", marginBottom: 5 }}>{product.name}</div>
+      <div className="card-name" style={{ fontSize: 14, fontWeight: 600, color: "#0d0d0d", marginBottom: 5 }}>{product.name}</div>
       <div className="card-sub" style={{ fontSize: 12, color: "#bbb", marginBottom: 14 }}>{product.subtitle}</div>
 
       <div style={{ display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: 4 }}>
-        <span className="card-price" style={{ fontSize: 20, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d1a" }}>
+        <span className="card-price" style={{ fontSize: 20, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d0d" }}>
           {product.price.toLocaleString("ru-RU")} ₽
         </span>
         {product.oldPrice && (
@@ -73,12 +73,12 @@ export default function ProductCard({ product }: { product: Product }) {
 
       <div style={{
         display: "flex", alignItems: "center", justifyContent: "space-between",
-        marginTop: 14, paddingTop: 14, borderTop: "1px solid #f0f0f4",
+        marginTop: 14, paddingTop: 14, borderTop: "1px solid #9d9d9d",
       }}>
         <div className="card-bonus" style={{ fontSize: 11, color: "#bbb" }}>+{bonus} бонусов</div>
         <button className="card-btn" style={{
           width: 34, height: 34, borderRadius: 8,
-          background: "#0a0a0a", color: "#fff", fontSize: 22,
+          background: "#0d0d0d", color: "#e8e8e8", fontSize: 22,
           display: "flex", alignItems: "center", justifyContent: "center",
           border: "none", cursor: "pointer", flexShrink: 0,
         }}>+</button>
@@ -87,3 +87,4 @@ export default function ProductCard({ product }: { product: Product }) {
     </Link>
   );
 }
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import type { ProductItem } from "@/lib/products";
@@ -30,7 +30,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
   const bonus = Math.floor(price * 0.01);
 
   const badgeLabel: Record<string, string> = { hot: "Хит", new: "Новинка", used: "Re:Set" };
-  const badgeColor: Record<string, string> = { hot: "#0c0c12", new: "#111111", used: "#0a0a0a" };
+  const badgeColor: Record<string, string> = { hot: "#0c0c12", new: "#222222", used: "#0a0a0a" };
 
   return (
     <div className="product-detail-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
@@ -38,7 +38,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
       {/* Gallery */}
       <div>
         <div style={{
-          background: "linear-gradient(145deg, #f2f2f2, #e8e8e8)",
+          background: "linear-gradient(145deg, #e8e8e8, #e8e8e8)",
           borderRadius: 20, overflow: "hidden", aspectRatio: "1",
           display: "flex", alignItems: "center", justifyContent: "center",
           marginBottom: 12,
@@ -55,8 +55,8 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
             {currentImages.map((img, i) => (
               <button key={i} onClick={() => setActiveImg(i)} style={{
                 width: 72, height: 72, borderRadius: 10, overflow: "hidden",
-                border: `2px solid ${i === activeImg ? "#0a0a0a" : "#e8e0e3"}`,
-                background: "linear-gradient(145deg, #f2f2f2, #e8e8e8)",
+                border: `2px solid ${i === activeImg ? "#0a0a0a" : "#9d9d9d"}`,
+                background: "linear-gradient(145deg, #e8e8e8, #e8e8e8)",
                 cursor: "pointer", padding: 4, flexShrink: 0,
               }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -78,14 +78,14 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
           }}>{badgeLabel[product.badge] || product.badge}</span>
         )}
 
-        <h1 style={{ fontSize: 32, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d1a", marginBottom: 6, lineHeight: 1.2 }}>
+        <h1 style={{ fontSize: 32, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d0d", marginBottom: 6, lineHeight: 1.2 }}>
           {product.name}
         </h1>
         <div style={{ fontSize: 14, color: "#999", marginBottom: 24 }}>{product.subtitle}</div>
 
         {/* Price */}
         <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
-          <span className="detail-price" style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.03em", color: "#0d0d1a", whiteSpace: "nowrap" }}>
+          <span className="detail-price" style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.03em", color: "#0d0d0d", whiteSpace: "nowrap" }}>
             {price.toLocaleString("ru-RU")} ₽
           </span>
           {oldPrice && (
@@ -100,7 +100,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
         {colors.length > 0 && (
           <div style={{ marginBottom: 24 }}>
             <div style={{ fontSize: 13, color: "#999", marginBottom: 10 }}>
-              Цвет: <span style={{ color: "#0d0d1a", fontWeight: 600 }}>{colors[activeColor].label}</span>
+              Цвет: <span style={{ color: "#0d0d0d", fontWeight: 600 }}>{colors[activeColor].label}</span>
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               {colors.map((c, i) => (
@@ -108,7 +108,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
                   width: 36, height: 36, borderRadius: "50%",
                   background: c.hex,
                   border: `3px solid ${i === activeColor ? "#0a0a0a" : "transparent"}`,
-                  outline: `2px solid ${i === activeColor ? "#0a0a0a" : "#e0d8db"}`,
+                  outline: `2px solid ${i === activeColor ? "#0a0a0a" : "#9d9d9d"}`,
                   cursor: "pointer", padding: 0, transition: "outline .15s",
                 }} />
               ))}
@@ -125,9 +125,9 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
                 <button key={s.label} onClick={() => setActiveStorage(i)} style={{
                   padding: "8px 18px", borderRadius: 8, fontSize: 13,
                   fontFamily: "inherit", fontWeight: 600,
-                  background: i === activeStorage ? "#0a0a0a" : "#fff",
+                  background: i === activeStorage ? "#0d0d0d" : "#e0e0e0",
                   color: i === activeStorage ? "#fff" : "#555",
-                  border: `1px solid ${i === activeStorage ? "#0a0a0a" : "#e0d8db"}`,
+                  border: `1px solid ${i === activeStorage ? "#0a0a0a" : "#9d9d9d"}`,
                   cursor: "pointer", transition: "all .15s",
                 }}>{s.label}</button>
               ))}
@@ -144,9 +144,9 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
                 <button key={sim} onClick={() => setActiveSim(sim)} style={{
                   padding: "8px 18px", borderRadius: 8, fontSize: 13,
                   fontFamily: "inherit", fontWeight: 600,
-                  background: activeSim === sim ? "#0d0d1a" : "#fff",
+                  background: activeSim === sim ? "#0d0d0d" : "#e0e0e0",
                   color: activeSim === sim ? "#fff" : "#555",
-                  border: `1px solid ${activeSim === sim ? "#0d0d1a" : "#e0d8db"}`,
+                  border: `1px solid ${activeSim === sim ? "#0d0d0d" : "#9d9d9d"}`,
                   cursor: "pointer", transition: "all .15s",
                 }}>{sim}</button>
               ))}
@@ -162,7 +162,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
           <button style={{ background: "transparent", color: "#0a0a0a", border: "2px solid #0a0a0a", padding: "14px 28px", borderRadius: 12, fontSize: 14, fontFamily: "inherit", fontWeight: 600, cursor: "pointer" }}>
             Рассрочка до 36 месяцев
           </button>
-          <button style={{ background: "transparent", color: "#555", border: "1px solid #e0d8db", padding: "14px 28px", borderRadius: 12, fontSize: 14, fontFamily: "inherit", cursor: "pointer" }}>
+          <button style={{ background: "transparent", color: "#555", border: "1px solid #9d9d9d", padding: "14px 28px", borderRadius: 12, fontSize: 14, fontFamily: "inherit", cursor: "pointer" }}>
             Написать в Telegram
           </button>
         </div>
@@ -175,9 +175,9 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
             { title: "Рассрочка", desc: "до 36 месяцев" },
             { title: "Оригинал", desc: "Без пробега по РФ" },
           ].map(({ title, desc }) => (
-            <div key={title} style={{ background: "#f2f2f2", border: "1px solid #e0e0e3", borderRadius: 10, padding: "12px 16px" }}>
+            <div key={title} style={{ background: "#e8e8e8", border: "1px solid #e0e0e3", borderRadius: 10, padding: "12px 16px" }}>
               <div style={{ fontSize: 12, color: "#bbb", marginBottom: 3 }}>{title}</div>
-              <div style={{ fontSize: 13, fontWeight: 600, color: "#0d0d1a" }}>{desc}</div>
+              <div style={{ fontSize: 13, fontWeight: 600, color: "#0d0d0d" }}>{desc}</div>
             </div>
           ))}
         </div>
@@ -185,7 +185,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
         {/* Description */}
         {product.description && (
           <div style={{ marginBottom: 28 }}>
-            <div style={{ fontSize: 14, fontWeight: 600, color: "#0d0d1a", marginBottom: 8 }}>О товаре</div>
+            <div style={{ fontSize: 14, fontWeight: 600, color: "#0d0d0d", marginBottom: 8 }}>О товаре</div>
             <p style={{ fontSize: 14, color: "#666", lineHeight: 1.8, margin: 0 }}>{product.description}</p>
           </div>
         )}
@@ -193,17 +193,17 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
         {/* Specs */}
         {product.specs && product.specs.length > 0 && (
           <div>
-            <div style={{ fontSize: 14, fontWeight: 600, color: "#0d0d1a", marginBottom: 12 }}>Характеристики</div>
-            <div style={{ border: "1px solid #e8e0e3", borderRadius: 12, overflow: "hidden" }}>
+            <div style={{ fontSize: 14, fontWeight: 600, color: "#0d0d0d", marginBottom: 12 }}>Характеристики</div>
+            <div style={{ border: "1px solid #9d9d9d", borderRadius: 12, overflow: "hidden" }}>
               {product.specs.map(({ label, value }, i) => (
                 <div key={label} style={{
                   display: "flex", justifyContent: "space-between", alignItems: "center",
                   padding: "12px 16px",
-                  background: i % 2 === 0 ? "#fff" : "#faf8f9",
-                  borderTop: i > 0 ? "1px solid #f0eaec" : "none",
+                  background: i % 2 === 0 ? "#e8e8e8" : "#e0e0e0",
+                  borderTop: i > 0 ? "1px solid #9d9d9d" : "none",
                 }}>
                   <span style={{ fontSize: 13, color: "#999" }}>{label}</span>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: "#0d0d1a" }}>{value}</span>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: "#0d0d0d" }}>{value}</span>
                 </div>
               ))}
             </div>
@@ -213,3 +213,4 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
     </div>
   );
 }
+

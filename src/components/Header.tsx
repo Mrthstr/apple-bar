@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -65,7 +65,7 @@ export default function Header() {
           alignItems: "center",
           padding: "0 48px",
           height: 48,
-          background: "#18181b",
+          background: "#0d0d0d",
         }}>
           {/* City switcher */}
           <div style={{ position: "relative" }}>
@@ -90,7 +90,7 @@ export default function Header() {
             {cityOpen && (
               <div style={{
                 position: "absolute", top: "calc(100% + 8px)", left: 0,
-                background: "#1c1c1e", border: "1px solid rgba(255,255,255,0.1)",
+                background: "#222222", border: "1px solid rgba(255,255,255,0.1)",
                 borderRadius: 12, padding: 8, minWidth: 220,
                 zIndex: 200, boxShadow: "0 16px 40px rgba(0,0,0,0.5)",
               }}>
@@ -148,7 +148,7 @@ export default function Header() {
             alignItems: "center",
             padding: "0 48px",
             height: 80,
-            background: "#28282d",
+            background: "#222222",
             position: "relative",
             zIndex: 101,
           }}
@@ -217,7 +217,7 @@ export default function Header() {
             onMouseLeave={() => setActiveMenu(null)}
             style={{
               position: "absolute", top: 128, left: 0, right: 0,
-              background: "#1c1c1e",
+              background: "#222222",
               borderTop: "1px solid rgba(255,255,255,0.07)",
               borderBottom: "1px solid rgba(255,255,255,0.07)",
               boxShadow: "0 20px 60px rgba(0,0,0,0.6)",
@@ -253,7 +253,7 @@ export default function Header() {
         }} onClick={() => setBurgerOpen(false)}>
           <div style={{
             position: "absolute", top: 0, left: 0, bottom: 0, width: "80%", maxWidth: 320,
-            background: "#1c1c1e",
+            background: "#222222",
             overflowY: "auto",
             boxShadow: "4px 0 40px rgba(0,0,0,0.6)",
           }} onClick={e => e.stopPropagation()}>
@@ -329,3 +329,4 @@ export default function Header() {
     </>
   );
 }
+
