@@ -1,4 +1,5 @@
-﻿import Header from "@/components/Header";
+﻿import Link from "next/link";
+import Header from "@/components/Header";
 import HeroCarousel from "@/components/HeroCarousel";
 import CatalogSection from "@/components/CatalogSection";
 import { ALL_PRODUCTS } from "@/lib/products";
@@ -127,7 +128,7 @@ export default function Home() {
               { label: "Ремонт", href: "/repair" },
               { label: "О магазине", href: "/about" },
             ].map(({ label, href }) => (
-              <a key={label} href={href} style={{ color: "#bbb", textDecoration: "none" }}>{label}</a>
+              <Link key={label} href={href} style={{ color: "#bbb", textDecoration: "none" }}>{label}</Link>
             ))}
           </div>
           <div style={{ display: "flex", gap: 10 }}>

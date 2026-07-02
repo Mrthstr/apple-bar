@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const cities = {
   uu:  { label: "Улан-Удэ", addr: "ул. Балтахинова 15, КТК GALAXY, 3 эт.", phone: "+7 (924) 392-13-11", phoneRaw: "+79243921311", gis: "https://2gis.ru/ulanude/firm/70000001102691711" },
@@ -116,12 +117,18 @@ export default function Header() {
 
           {/* Service links */}
           <nav style={{ display: "flex", alignItems: "center" }}>
-            {["Доставка", "Гарантия", "Trade-In", "Рассрочка", "О нас"].map(label => (
-              <a key={label} href="#" style={{
+            {[
+              { label: "Доставка", href: "/delivery" },
+              { label: "Гарантия", href: "/delivery" },
+              { label: "Trade-In", href: "/trade-in" },
+              { label: "Рассрочка", href: "/delivery" },
+              { label: "О нас", href: "/about" },
+            ].map(({ label, href }) => (
+              <Link key={label} href={href} style={{
                 fontSize: 12, color: "rgba(255,255,255,0.4)", cursor: "pointer",
                 padding: "0 16px", height: 48, display: "flex", alignItems: "center",
                 textDecoration: "none", whiteSpace: "nowrap",
-              }}>{label}</a>
+              }}>{label}</Link>
             ))}
           </nav>
 
@@ -318,8 +325,14 @@ export default function Header() {
 
             {/* Bottom links */}
             <div style={{ padding: "16px 20px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-              {["Доставка", "Гарантия", "Trade-In", "Рассрочка", "О нас"].map(l => (
-                <a key={l} href="#" style={{ display: "block", padding: "10px 0", fontSize: 13, color: "rgba(255,255,255,0.45)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>{l}</a>
+              {[
+                { label: "Доставка", href: "/delivery" },
+                { label: "Гарантия", href: "/delivery" },
+                { label: "Trade-In", href: "/trade-in" },
+                { label: "Рассрочка", href: "/delivery" },
+                { label: "О нас", href: "/about" },
+              ].map(({ label, href }) => (
+                <Link key={label} href={href} style={{ display: "block", padding: "10px 0", fontSize: 13, color: "rgba(255,255,255,0.45)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>{label}</Link>
               ))}
             </div>
 
