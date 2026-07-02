@@ -119,27 +119,27 @@ export default function HeroCarousel() {
       }}>
         <div style={{ display: "inline-flex", marginBottom: 18 }}>
           <span style={{
-            background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.15)",
+            background: "rgba(93,93,95,0.3)", border: "1px solid #5d5d5f",
             borderRadius: 20, padding: "5px 16px", fontSize: 12,
-            color: "rgba(255,255,255,0.7)", letterSpacing: "0.05em",
+            color: "#9d9d9d", letterSpacing: "0.05em",
           }}>{s.badge}</span>
         </div>
 
         <h1 style={{
           fontSize: "clamp(28px, 8vw, 48px)", fontWeight: 600, lineHeight: 1.1,
-          letterSpacing: "-0.02em", color: "#fff",
+          letterSpacing: "-0.02em", color: "#e8e8e8",
           marginBottom: 16, whiteSpace: "pre-line",
           textShadow: "0 2px 20px rgba(0,0,0,0.3)",
         }}>{s.title}</h1>
 
-        <p style={{ fontSize: 15, color: "rgba(255,255,255,0.55)", lineHeight: 1.8, maxWidth: 440, marginBottom: 32 }}>
+        <p style={{ fontSize: 15, color: "#9d9d9d", lineHeight: 1.8, maxWidth: 440, marginBottom: 32 }}>
           {s.desc}
         </p>
 
         <div>
           <button style={{
-            background: "#e8e8e8", color: "#0d0d0d",
-            border: "none", padding: "14px 28px", borderRadius: 10,
+            background: "#222222", color: "#e8e8e8",
+            border: "1px solid #5d5d5f", padding: "14px 28px", borderRadius: 10,
             fontSize: 13, fontFamily: "inherit", fontWeight: 600, cursor: "pointer",
           }}>
             {s.cta}
@@ -171,7 +171,7 @@ export default function HeroCarousel() {
         {slides.map((_, i) => (
           <button key={i} onClick={() => goTo(i)} style={{
             width: i === current ? 24 : 8, height: 8, borderRadius: 4,
-            background: i === current ? "#fff" : "rgba(255,255,255,0.3)",
+            background: i === current ? "#9d9d9d" : "rgba(93,93,95,0.4)",
             border: "none", cursor: "pointer", padding: 0,
             transition: "width 0.3s, background 0.3s",
           }} />
