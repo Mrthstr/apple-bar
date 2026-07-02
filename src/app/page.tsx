@@ -31,7 +31,7 @@ export default function Home() {
           </div>
           {/* Button side */}
           <div className="trade-in-cta">
-            <button style={{ background: "#fff", color: "#3a3a3c", border: "none", padding: "14px 24px", borderRadius: 10, fontSize: 13, fontFamily: "inherit", fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap", width: "100%" }}>
+            <button style={{ background: "#fff", color: "#111111", border: "none", padding: "14px 24px", borderRadius: 10, fontSize: 13, fontFamily: "inherit", fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap", width: "100%" }}>
               Оценить устройство
             </button>
           </div>
@@ -47,13 +47,13 @@ export default function Home() {
           {/* Content */}
           <div className="bonus-content">
           <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-            <div style={{ width: 52, height: 52, background: "#f0f0f2", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, color: "#636366" }}>★</div>
+            <div style={{ width: 52, height: 52, background: "#f2f2f2", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, color: "#0a0a0a" }}>★</div>
             <div>
               <div style={{ fontSize: 15, fontWeight: 600, color: "#0d0d1a", marginBottom: 5 }}>Бонусная программа</div>
               <div style={{ fontSize: 13, color: "#999", lineHeight: 1.7 }}>1% от суммы покупки возвращается бонусами — списывайте как рубли</div>
             </div>
           </div>
-          <button style={{ background: "#636366", color: "#fff", border: "none", padding: "13px 24px", borderRadius: 10, fontSize: 13, fontFamily: "inherit", cursor: "pointer", whiteSpace: "nowrap" }}>
+          <button style={{ background: "#0a0a0a", color: "#fff", border: "none", padding: "13px 24px", borderRadius: 10, fontSize: 13, fontFamily: "inherit", cursor: "pointer", whiteSpace: "nowrap" }}>
             Зарегистрироваться
           </button>
           </div>
@@ -88,17 +88,17 @@ export default function Home() {
               <div>
                 <div style={{ fontSize: 14, fontWeight: 600, color: "#0d0d1a", marginBottom: 4 }}>Улан-Удэ</div>
                 <div style={{ fontSize: 13, color: "#999" }}>КТК «Galaxy», 3 этаж, Балтахинова 15</div>
-                <div style={{ fontSize: 13, color: "#999" }}>10:00 — 20:00, ежедневно · <a href="tel:+79243921311" style={{ color: "#636366", textDecoration: "none" }}>+7 (924) 392-13-11</a></div>
+                <div style={{ fontSize: 13, color: "#999" }}>10:00 — 20:00, ежедневно · <a href="tel:+79243921311" style={{ color: "#0a0a0a", textDecoration: "none" }}>+7 (924) 392-13-11</a></div>
               </div>
               <div>
                 <div style={{ fontSize: 14, fontWeight: 600, color: "#0d0d1a", marginBottom: 4 }}>Иркутск</div>
                 <div style={{ fontSize: 13, color: "#999" }}>ул. Богдана Хмельницкого, 3</div>
-                <div style={{ fontSize: 13, color: "#999" }}>10:00 — 20:00, ежедневно · <a href="tel:+79939391806" style={{ color: "#636366", textDecoration: "none" }}>+7 (993) 939-18-06</a></div>
+                <div style={{ fontSize: 13, color: "#999" }}>10:00 — 20:00, ежедневно · <a href="tel:+79939391806" style={{ color: "#0a0a0a", textDecoration: "none" }}>+7 (993) 939-18-06</a></div>
               </div>
             </div>
           </div>
           <div style={{
-            background: "linear-gradient(135deg, #3a3a3c 0%, #1c1c1e 100%)",
+            background: "linear-gradient(135deg, #111111 0%, #0d0d0d 100%)",
             borderRadius: 20, padding: "56px 40px",
             display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 300,
           }}>

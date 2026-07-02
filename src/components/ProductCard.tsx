@@ -42,7 +42,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="card-img" style={{
         width: "100%", aspectRatio: "1", display: "flex",
         alignItems: "center", justifyContent: "center",
-        background: "linear-gradient(145deg, #f0f0f2, #e8e8ec)",
+        background: "linear-gradient(145deg, #f2f2f2, #e8e8e8)",
         borderRadius: 12, marginBottom: 18, overflow: "hidden",
       }}>
         {product.image ? (
@@ -78,7 +78,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="card-bonus" style={{ fontSize: 11, color: "#bbb" }}>+{bonus} бонусов</div>
         <button className="card-btn" style={{
           width: 34, height: 34, borderRadius: 8,
-          background: "#636366", color: "#fff", fontSize: 22,
+          background: "#0a0a0a", color: "#fff", fontSize: 22,
           display: "flex", alignItems: "center", justifyContent: "center",
           border: "none", cursor: "pointer", flexShrink: 0,
         }}>+</button>
