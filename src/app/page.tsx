@@ -74,7 +74,7 @@ export default function Home() {
         </div>
 
         {/* ── О КОМПАНИИ ── */}
-        <div className="two-col page-section" style={{ background: "#e8e8e8", border: "1px solid #9d9d9d", borderRadius: 14, overflow: "hidden" }}>
+        <div className="two-col page-section" style={{ background: "#e8e8e8", border: "1px solid #9d9d9d", borderRadius: 14, overflow: "hidden", gap: 0 }}>
           <div style={{ padding: "48px 32px" }}>
             <div style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#bbb", marginBottom: 12 }}>О компании</div>
             <h2 style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d0d", marginBottom: 20 }}>applebar</h2>
@@ -99,8 +99,8 @@ export default function Home() {
           </div>
           <div style={{
             background: "linear-gradient(135deg, #222222 0%, #0d0d0d 100%)",
-            borderRadius: 20, padding: "56px 40px",
-            display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, alignSelf: "stretch",
+            padding: "56px 40px",
+            display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16,
           }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo/logo-transparent.png" alt="applebar" style={{ height: 60, objectFit: "contain" }} />
