@@ -27,10 +27,10 @@ export default function CatalogSection({ products }: { products: ProductWithCat[
       <div style={{ display: "flex", gap: 9, flexWrap: "wrap", marginBottom: 24 }}>
         {CATS.map(c => (
           <button key={c} onClick={() => setActiveCat(c)} style={{
-            border: "1px solid", borderColor: activeCat === c ? "#6b1428" : "#e0d8db",
+            border: "1px solid", borderColor: activeCat === c ? "#636366" : "#e0d8db",
             borderRadius: 24, padding: "7px 18px", fontSize: 13,
             fontFamily: "inherit",
-            background: activeCat === c ? "#6b1428" : "#fff",
+            background: activeCat === c ? "#636366" : "#fff",
             color: activeCat === c ? "#fff" : "#888",
             cursor: "pointer", transition: "all .15s",
           }}>{c}</button>

@@ -30,7 +30,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
   const bonus = Math.floor(price * 0.01);
 
   const badgeLabel: Record<string, string> = { hot: "Хит", new: "Новинка", used: "Re:Set" };
-  const badgeColor: Record<string, string> = { hot: "#0c0c12", new: "#5560aa", used: "#6b1428" };
+  const badgeColor: Record<string, string> = { hot: "#0c0c12", new: "#3a3a3c", used: "#636366" };
 
   return (
     <div className="product-detail-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
@@ -38,7 +38,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
       {/* Gallery */}
       <div>
         <div style={{
-          background: "linear-gradient(145deg, #f5eef0, #ede5e8)",
+          background: "linear-gradient(145deg, #f0f0f2, #e8e8ec)",
           borderRadius: 20, overflow: "hidden", aspectRatio: "1",
           display: "flex", alignItems: "center", justifyContent: "center",
           marginBottom: 12,
@@ -55,8 +55,8 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
             {currentImages.map((img, i) => (
               <button key={i} onClick={() => setActiveImg(i)} style={{
                 width: 72, height: 72, borderRadius: 10, overflow: "hidden",
-                border: `2px solid ${i === activeImg ? "#6b1428" : "#e8e0e3"}`,
-                background: "linear-gradient(145deg, #f5eef0, #ede5e8)",
+                border: `2px solid ${i === activeImg ? "#636366" : "#e8e0e3"}`,
+                background: "linear-gradient(145deg, #f0f0f2, #e8e8ec)",
                 cursor: "pointer", padding: 4, flexShrink: 0,
               }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -94,7 +94,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
             </span>
           )}
         </div>
-        <div style={{ fontSize: 13, color: "#6b1428", marginBottom: 28 }}>+{bonus} бонусов за покупку</div>
+        <div style={{ fontSize: 13, color: "#636366", marginBottom: 28 }}>+{bonus} бонусов за покупку</div>
 
         {/* Цвет */}
         {colors.length > 0 && (
@@ -107,8 +107,8 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
                 <button key={c.label} onClick={() => handleColorClick(i)} title={c.label} style={{
                   width: 36, height: 36, borderRadius: "50%",
                   background: c.hex,
-                  border: `3px solid ${i === activeColor ? "#6b1428" : "transparent"}`,
-                  outline: `2px solid ${i === activeColor ? "#6b1428" : "#e0d8db"}`,
+                  border: `3px solid ${i === activeColor ? "#636366" : "transparent"}`,
+                  outline: `2px solid ${i === activeColor ? "#636366" : "#e0d8db"}`,
                   cursor: "pointer", padding: 0, transition: "outline .15s",
                 }} />
               ))}
@@ -125,9 +125,9 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
                 <button key={s.label} onClick={() => setActiveStorage(i)} style={{
                   padding: "8px 18px", borderRadius: 8, fontSize: 13,
                   fontFamily: "inherit", fontWeight: 600,
-                  background: i === activeStorage ? "#6b1428" : "#fff",
+                  background: i === activeStorage ? "#636366" : "#fff",
                   color: i === activeStorage ? "#fff" : "#555",
-                  border: `1px solid ${i === activeStorage ? "#6b1428" : "#e0d8db"}`,
+                  border: `1px solid ${i === activeStorage ? "#636366" : "#e0d8db"}`,
                   cursor: "pointer", transition: "all .15s",
                 }}>{s.label}</button>
               ))}
@@ -156,10 +156,10 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
 
         {/* CTA */}
         <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
-          <button style={{ background: "#6b1428", color: "#fff", border: "none", padding: "16px 28px", borderRadius: 12, fontSize: 14, fontFamily: "inherit", fontWeight: 600, cursor: "pointer" }}>
+          <button style={{ background: "#636366", color: "#fff", border: "none", padding: "16px 28px", borderRadius: 12, fontSize: 14, fontFamily: "inherit", fontWeight: 600, cursor: "pointer" }}>
             Купить сейчас
           </button>
-          <button style={{ background: "transparent", color: "#6b1428", border: "2px solid #6b1428", padding: "14px 28px", borderRadius: 12, fontSize: 14, fontFamily: "inherit", fontWeight: 600, cursor: "pointer" }}>
+          <button style={{ background: "transparent", color: "#636366", border: "2px solid #636366", padding: "14px 28px", borderRadius: 12, fontSize: 14, fontFamily: "inherit", fontWeight: 600, cursor: "pointer" }}>
             Рассрочка до 36 месяцев
           </button>
           <button style={{ background: "transparent", color: "#555", border: "1px solid #e0d8db", padding: "14px 28px", borderRadius: 12, fontSize: 14, fontFamily: "inherit", cursor: "pointer" }}>

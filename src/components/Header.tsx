@@ -65,7 +65,7 @@ export default function Header() {
           alignItems: "center",
           padding: "0 48px",
           height: 48,
-          background: "#2e0f18",
+          background: "#18181b",
         }}>
           {/* City switcher */}
           <div style={{ position: "relative" }}>
@@ -90,7 +90,7 @@ export default function Header() {
             {cityOpen && (
               <div style={{
                 position: "absolute", top: "calc(100% + 8px)", left: 0,
-                background: "#16161e", border: "1px solid rgba(255,255,255,0.1)",
+                background: "#1c1c1e", border: "1px solid rgba(255,255,255,0.1)",
                 borderRadius: 12, padding: 8, minWidth: 220,
                 zIndex: 200, boxShadow: "0 16px 40px rgba(0,0,0,0.5)",
               }}>
@@ -98,7 +98,7 @@ export default function Header() {
                   <button key={key} onClick={() => { setCity(key); setCityOpen(false); }} style={{
                     display: "flex", alignItems: "center", justifyContent: "space-between",
                     width: "100%", padding: "11px 14px", borderRadius: 8,
-                    background: city === key ? "rgba(255,255,255,0.1)" : "transparent",
+                    background: city === key ? "rgba(255,255,255,0.08)" : "transparent",
                     border: "none", cursor: "pointer", fontFamily: "inherit",
                     color: city === key ? "#fff" : "rgba(255,255,255,0.5)",
                     fontWeight: city === key ? 600 : 400, fontSize: 13, textAlign: "left",
@@ -148,7 +148,7 @@ export default function Header() {
             alignItems: "center",
             padding: "0 48px",
             height: 80,
-            background: "#3d1420",
+            background: "#28282d",
             position: "relative",
             zIndex: 101,
           }}
@@ -217,7 +217,7 @@ export default function Header() {
             onMouseLeave={() => setActiveMenu(null)}
             style={{
               position: "absolute", top: 128, left: 0, right: 0,
-              background: "#1a0810",
+              background: "#1c1c1e",
               borderTop: "1px solid rgba(255,255,255,0.07)",
               borderBottom: "1px solid rgba(255,255,255,0.07)",
               boxShadow: "0 20px 60px rgba(0,0,0,0.6)",
@@ -253,7 +253,7 @@ export default function Header() {
         }} onClick={() => setBurgerOpen(false)}>
           <div style={{
             position: "absolute", top: 0, left: 0, bottom: 0, width: "80%", maxWidth: 320,
-            background: "#1a0810",
+            background: "#1c1c1e",
             overflowY: "auto",
             boxShadow: "4px 0 40px rgba(0,0,0,0.6)",
           }} onClick={e => e.stopPropagation()}>
