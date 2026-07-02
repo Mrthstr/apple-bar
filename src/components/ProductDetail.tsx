@@ -84,12 +84,12 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
         <div style={{ fontSize: 14, color: "#999", marginBottom: 24 }}>{product.subtitle}</div>
 
         {/* Price */}
-        <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 6 }}>
-          <span style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.03em", color: "#0d0d1a" }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
+          <span style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.03em", color: "#0d0d1a", whiteSpace: "nowrap" }}>
             {price.toLocaleString("ru-RU")} ₽
           </span>
           {oldPrice && (
-            <span style={{ fontSize: 18, color: "#ccc", textDecoration: "line-through" }}>
+            <span style={{ fontSize: 18, color: "#ccc", textDecoration: "line-through", whiteSpace: "nowrap" }}>
               {oldPrice.toLocaleString("ru-RU")} ₽
             </span>
           )}
