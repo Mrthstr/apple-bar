@@ -77,7 +77,7 @@ export default function Home() {
         <div className="two-col page-section" style={{ background: "#e8e8e8", border: "1px solid #9d9d9d", borderRadius: 14, padding: "48px 32px" }}>
           <div>
             <div style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#bbb", marginBottom: 12 }}>О компании</div>
-            <h2 style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d0d", marginBottom: 20 }}>bapplebar</h2>
+            <h2 style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d0d", marginBottom: 20 }}>applebar</h2>
             <p style={{ fontSize: 14, color: "#666", lineHeight: 1.9, marginBottom: 28 }}>
               — магазины премиальной техники в Улан-Удэ и Иркутске. Работаем с 2019 года. Привозим оригинальную технику из Кореи, Японии и США без пробега по России — на 30–40% дешевле официальных цен.
             </p>
@@ -103,7 +103,7 @@ export default function Home() {
             display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 300,
           }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo/logo-transparent.png" alt="bapplebar" style={{ height: 60, objectFit: "contain" }} />
+            <img src="/logo/logo-transparent.png" alt="applebar" style={{ height: 60, objectFit: "contain" }} />
             <div style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", textAlign: "center", lineHeight: 1.7 }}>
               Оригинальная техника<br />из Азии и США
             </div>
@@ -113,7 +113,7 @@ export default function Home() {
         {/* ── FOOTER ── */}
         <footer style={{ marginTop: 32, borderTop: "1px solid #9d9d9d", background: "#e8e8e8" }}>
           <div className="footer-inner" style={{ padding: "24px 48px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <span style={{ fontSize: 16, fontWeight: 600, color: "#0d0d0d" }}>bapplebar</span>
+          <span style={{ fontSize: 16, fontWeight: 600, color: "#0d0d0d" }}>applebar</span>
           <div className="footer-nav" style={{ display: "flex", gap: 20, fontSize: 13 }}>
             {["Доставка", "Гарантия", "Trade-In", "О магазине", "Контакты"].map(l => (
               <a key={l} href="#" style={{ color: "#bbb", textDecoration: "none" }}>{l}</a>
@@ -135,4 +135,5 @@ export default function Home() {
     </>
   );
 }
+
 

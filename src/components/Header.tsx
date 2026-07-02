@@ -157,7 +157,7 @@ export default function Header() {
           {/* Logo */}
           <a href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo/logo-transparent.png" alt="bapplebar" style={{ height: 44, objectFit: "contain" }} />
+            <img src="/logo/logo-transparent.png" alt="applebar" style={{ height: 44, objectFit: "contain" }} />
           </a>
 
           {/* Desktop categories */}
@@ -261,7 +261,7 @@ export default function Header() {
             {/* Drawer header */}
             <div style={{ padding: "20px 20px 16px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo/logo-transparent.png" alt="bapplebar" style={{ height: 32, objectFit: "contain" }} />
+              <img src="/logo/logo-transparent.png" alt="applebar" style={{ height: 32, objectFit: "contain" }} />
             </div>
 
             {/* City + phone */}
@@ -329,4 +329,5 @@ export default function Header() {
     </>
   );
 }
+
 

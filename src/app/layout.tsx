@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Unbounded } from "next/font/google";
 import "./globals.css";
 
@@ -10,7 +10,7 @@ const unbounded = Unbounded({
 });
 
 export const metadata: Metadata = {
-  title: "bapplebar — Apple, Samsung, Dyson в Улан-Удэ и Иркутске",
+  title: "applebar — Apple, Samsung, Dyson в Улан-Удэ и Иркутске",
   description: "Оригинальная техника из Кореи, Японии и США. iPhone, MacBook, Apple Watch, Dyson. Гарантия, рассрочка 0%, Trade-In.",
 };
 
@@ -25,3 +25,4 @@ export default function RootLayout({
     </html>
   );
 }
+
