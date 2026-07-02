@@ -114,7 +114,7 @@ export default function Home() {
         <footer style={{ marginTop: 32, borderTop: "1px solid #e8e0e3", background: "#fff" }}>
           <div className="footer-inner" style={{ padding: "24px 48px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontSize: 16, fontWeight: 600, color: "#0d0d1a" }}>bapplebar</span>
-          <div style={{ display: "flex", gap: 20, fontSize: 13 }}>
+          <div className="footer-nav" style={{ display: "flex", gap: 20, fontSize: 13 }}>
             {["Доставка", "Гарантия", "Trade-In", "О магазине", "Контакты"].map(l => (
               <a key={l} href="#" style={{ color: "#bbb", textDecoration: "none" }}>{l}</a>
             ))}

@@ -98,33 +98,23 @@ html, body {
 @media (max-width: 768px) {
   :root { --page-px: 16px; }
 
-  /* header topbar */
-  .topbar-service-links { display: none !important; }
-  .topbar-address { display: none !important; }
-  .topbar-grid {
-    grid-template-columns: 1fr auto !important;
-  }
+  /* hide desktop topbar entirely */
+  .topbar { display: none !important; }
 
   /* main nav */
-  .mainnav-grid {
+  .mainnav {
     grid-template-columns: auto 1fr auto !important;
     padding: 0 16px !important;
     height: 60px !important;
   }
-  .mainnav-logo img { height: 32px !important; }
-  .mainnav-cats {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .mainnav-cats::-webkit-scrollbar { display: none; }
-  .mainnav-cats a {
-    padding: 0 12px !important;
-    font-size: 12px !important;
-    height: 60px !important;
-  }
-  .mainnav-icons button { width: 36px !important; height: 36px !important; }
-  .mainnav-icons .login-btn { display: none !important; }
+  .mainnav img { height: 32px !important; }
+
+  /* hide desktop cats and icons */
+  .desktop-cats { display: none !important; }
+  .desktop-icons { display: none !important; }
+
+  /* show mobile burger */
+  .mobile-nav-right { display: flex !important; }
 
   /* catalog */
   .catalog-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
