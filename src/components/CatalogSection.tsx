@@ -17,7 +17,7 @@ export default function CatalogSection({ products }: { products: ProductWithCat[
   const cols = 4;
 
   return (
-    <div style={{ padding: "36px 48px 0" }}>
+    <div className="catalog-section">
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 20, paddingBottom: 16, borderBottom: "1px solid #e8e0e3" }}>
         <span style={{ fontSize: 16, fontWeight: 600, color: "#0d0d1a" }}>Каталог</span>
         <span style={{ fontSize: 13, color: "#bbb", cursor: "pointer" }}>Все товары →</span>

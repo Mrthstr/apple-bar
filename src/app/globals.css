@@ -25,6 +25,10 @@ html, body {
   margin: 32px var(--page-px) 0;
 }
 
+.catalog-section {
+  padding: 36px 48px 0;
+}
+
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -117,7 +121,8 @@ html, body {
   .mobile-nav-right { display: flex !important; }
 
   /* catalog */
-  .catalog-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  .catalog-section { padding: 20px 12px 0 !important; }
+  .catalog-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0 !important; }
 
   /* trade-in */
   .trade-in-block { flex-direction: column !important; }
