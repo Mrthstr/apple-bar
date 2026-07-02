@@ -99,16 +99,14 @@ export default function Home() {
           </div>
           <div style={{
             background: "linear-gradient(135deg, #222222 0%, #0d0d0d 100%)",
-            borderRadius: 20, overflow: "hidden",
-            position: "relative", minHeight: 300,
+            borderRadius: 20, padding: "56px 40px",
+            display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16, minHeight: 300,
           }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo/logo-transparent.png" alt="applebar" style={{
-              width: "100%", height: "100%",
-              objectFit: "contain", objectPosition: "center",
-              position: "absolute", inset: 0,
-              padding: "40px",
-            }} />
+            <img src="/logo/logo-transparent.png" alt="applebar" style={{ height: 60, objectFit: "contain" }} />
+            <div style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", textAlign: "center", lineHeight: 1.7 }}>
+              Оригинальная техника<br />из Азии и США
+            </div>
           </div>
         </div>
 
