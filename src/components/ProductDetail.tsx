@@ -85,11 +85,11 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
 
         {/* Price */}
         <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
-          <span style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.03em", color: "#0d0d1a", whiteSpace: "nowrap" }}>
+          <span className="detail-price" style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.03em", color: "#0d0d1a", whiteSpace: "nowrap" }}>
             {price.toLocaleString("ru-RU")} ₽
           </span>
           {oldPrice && (
-            <span style={{ fontSize: 18, color: "#ccc", textDecoration: "line-through", whiteSpace: "nowrap" }}>
+            <span className="detail-old-price" style={{ fontSize: 18, color: "#ccc", textDecoration: "line-through", whiteSpace: "nowrap" }}>
               {oldPrice.toLocaleString("ru-RU")} ₽
             </span>
           )}
