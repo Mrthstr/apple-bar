@@ -74,7 +74,7 @@ export default function Home() {
         </div>
 
         {/* ── О КОМПАНИИ ── */}
-        <div className="two-col page-section" style={{ background: "#e8e8e8", border: "1px solid #9d9d9d", borderRadius: 14, overflow: "hidden", gap: 0 }}>
+        <div className="page-section" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, background: "#e8e8e8", border: "1px solid #9d9d9d", borderRadius: 14, overflow: "hidden" }}>
           <div style={{ padding: "48px 32px" }}>
             <div style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#bbb", marginBottom: 12 }}>О компании</div>
             <h2 style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d0d", marginBottom: 20 }}>applebar</h2>
