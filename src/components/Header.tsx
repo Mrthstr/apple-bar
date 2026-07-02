@@ -54,7 +54,7 @@ export default function Header() {
     <header style={{ position: "relative", zIndex: 100 }}>
 
       {/* ── TOP BAR ── */}
-      <div style={{
+      <div className="topbar-grid" style={{
         display: "grid",
         gridTemplateColumns: "1fr auto 1fr",
         alignItems: "center",
@@ -117,7 +117,7 @@ export default function Header() {
         </div>
 
         {/* Service links */}
-        <nav style={{ display: "flex", alignItems: "center" }}>
+        <nav className="topbar-service-links" style={{ display: "flex", alignItems: "center" }}>
           {["Доставка", "Гарантия", "Trade-In", "Рассрочка", "О нас"].map((label) => (
             <a key={label} href="#" style={{
               fontSize: 12, color: "rgba(255,255,255,0.4)", cursor: "pointer",
@@ -131,7 +131,7 @@ export default function Header() {
         </nav>
 
         {/* Phone + address */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 24 }}>
+        <div className="topbar-address" style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 24 }}>
           <a href={cur.gis} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: "rgba(255,255,255,0.65)", fontWeight: 600, whiteSpace: "nowrap", textDecoration: "none", borderBottom: "1px dashed rgba(255,255,255,0.25)" }}>
             {cur.addr}
           </a>
@@ -148,6 +148,7 @@ export default function Header() {
 
       {/* ── MAIN NAV ── */}
       <div
+        className="mainnav-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr auto 1fr",
@@ -162,13 +163,13 @@ export default function Header() {
       >
 
         {/* Logo */}
-        <a href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+        <a href="/" className="mainnav-logo" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo/logo-transparent.png" alt="bapplebar" style={{ height: 44, objectFit: "contain" }} />
         </a>
 
         {/* Categories */}
-        <nav style={{ display: "flex", alignItems: "center" }}>
+        <nav className="mainnav-cats" style={{ display: "flex", alignItems: "center" }}>
           {(["Apple", "Samsung", "Dyson", "Гаджеты", "Re:Set"] as const).map((cat) => (
             <div
               key={cat}
@@ -189,7 +190,7 @@ export default function Header() {
         </nav>
 
         {/* Icons + login */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 4 }}>
+        <div className="mainnav-icons" style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 4 }}>
           {[
             {
               label: "Поиск",
@@ -227,7 +228,7 @@ export default function Header() {
               {svg}
             </button>
           ))}
-          <button style={{
+          <button className="login-btn" style={{
             border: "none",
             color: "rgba(255,255,255,0.75)",
             background: "transparent",

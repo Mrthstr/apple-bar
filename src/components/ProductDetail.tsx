@@ -33,7 +33,7 @@ export default function ProductDetail({ product }: { product: ProductItem }) {
   const badgeColor: Record<string, string> = { hot: "#0c0c12", new: "#5560aa", used: "#6b1428" };
 
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
+    <div className="product-detail-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "start" }}>
 
       {/* Gallery */}
       <div>

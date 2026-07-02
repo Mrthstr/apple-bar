@@ -18,9 +18,9 @@ export default function Home() {
         <CatalogSection products={ALL_PRODUCTS} />
 
         {/* ── TRADE-IN ── */}
-        <div style={{ margin: "32px 48px 0", borderRadius: 14, display: "flex", alignItems: "stretch", overflow: "hidden", border: "1px solid #e0d8db" }}>
+        <div className="trade-in-block page-section-first">
           {/* Photo + text overlay */}
-          <div style={{ flex: 1, position: "relative", overflow: "hidden", height: 240 }}>
+          <div className="trade-in-photo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/banners/tradein.jpg" alt="Trade-In iPhone" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 75%" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(10,3,8,0.75) 0%, rgba(10,3,8,0.3) 50%, transparent 100%)" }} />
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
           </div>
           {/* Button side */}
-          <div style={{ width: 260, flexShrink: 0, background: "linear-gradient(135deg, #3d0a14 0%, #1a0810 100%)", display: "flex", alignItems: "center", justifyContent: "center", padding: "0 32px" }}>
+          <div className="trade-in-cta">
             <button style={{ background: "#fff", color: "#3d0a14", border: "none", padding: "14px 24px", borderRadius: 10, fontSize: 13, fontFamily: "inherit", fontWeight: 600, cursor: "pointer", whiteSpace: "nowrap", width: "100%" }}>
               Оценить устройство
             </button>
@@ -38,14 +38,14 @@ export default function Home() {
         </div>
 
         {/* ── BONUS ── */}
-        <div style={{ margin: "16px 48px 0", border: "1px solid #e8e0e3", borderRadius: 14, overflow: "hidden", display: "flex", alignItems: "stretch", background: "#fff", minHeight: 160 }}>
+        <div className="bonus-block page-section">
           {/* Image */}
-          <div style={{ width: 280, flexShrink: 0, position: "relative", overflow: "hidden" }}>
+          <div className="bonus-photo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/banners/bonus.jpg" alt="Бонусная программа" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
           </div>
           {/* Content */}
-          <div style={{ flex: 1, padding: "28px 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div className="bonus-content">
           <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
             <div style={{ width: 52, height: 52, background: "#f5eef0", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, color: "#6b1428" }}>★</div>
             <div>
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         {/* ── FEATURES ── */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 1, background: "#e0d8db", border: "1px solid #e0d8db", borderRadius: 14, overflow: "hidden", margin: "16px 48px 0" }}>
+        <div className="three-col page-section" style={{ gap: 1, background: "#e0d8db", border: "1px solid #e0d8db", borderRadius: 14, overflow: "hidden" }}>
           {[
             { title: "Гарантия до 12 месяцев", desc: "На всю технику. Официальная гарантия на каждое устройство." },
             { title: "Рассрочка до 36 месяцев", desc: "Без переплат и скрытых комиссий. Быстрое одобрение онлайн." },
@@ -74,7 +74,7 @@ export default function Home() {
         </div>
 
         {/* ── О КОМПАНИИ ── */}
-        <div style={{ margin: "16px 48px 0", background: "#fff", border: "1px solid #e8e0e3", borderRadius: 14, padding: "48px 48px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
+        <div className="two-col page-section" style={{ background: "#fff", border: "1px solid #e8e0e3", borderRadius: 14, padding: "48px 32px" }}>
           <div>
             <div style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#bbb", marginBottom: 12 }}>О компании</div>
             <h2 style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d1a", marginBottom: 20 }}>bapplebar</h2>
@@ -111,7 +111,8 @@ export default function Home() {
         </div>
 
         {/* ── FOOTER ── */}
-        <footer style={{ marginTop: 32, borderTop: "1px solid #e8e0e3", padding: "24px 48px", display: "flex", alignItems: "center", justifyContent: "space-between", background: "#fff" }}>
+        <footer style={{ marginTop: 32, borderTop: "1px solid #e8e0e3", background: "#fff" }}>
+          <div className="footer-inner" style={{ padding: "24px 48px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontSize: 16, fontWeight: 600, color: "#0d0d1a" }}>bapplebar</span>
           <div style={{ display: "flex", gap: 20, fontSize: 13 }}>
             {["Доставка", "Гарантия", "Trade-In", "О магазине", "Контакты"].map(l => (
@@ -126,6 +127,7 @@ export default function Home() {
                 </svg>
               </a>
             ))}
+          </div>
           </div>
         </footer>
 

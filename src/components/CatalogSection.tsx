@@ -39,7 +39,7 @@ export default function CatalogSection({ products }: { products: ProductWithCat[
 
       {/* Product grid */}
       {filtered.length > 0 ? (
-        <div style={{ display: "grid", gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: 1, background: "#e0d8db", border: "1px solid #e0d8db", borderRadius: 14, overflow: "hidden" }}>
+        <div className="catalog-grid" style={{ gap: 1, background: "#e0d8db", border: "1px solid #e0d8db", borderRadius: 14, overflow: "hidden" }}>
           {filtered.map(p => <ProductCard key={p.id} product={p} />)}
         </div>
       ) : (
