@@ -3,6 +3,10 @@ import Header from "@/components/Header";
 import { ALL_PRODUCTS } from "@/lib/products";
 import ProductDetail from "@/components/ProductDetail";
 
+export function generateStaticParams() {
+  return ALL_PRODUCTS.map((p) => ({ id: p.id }));
+}
+
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const product = ALL_PRODUCTS.find(p => p.id === id);
