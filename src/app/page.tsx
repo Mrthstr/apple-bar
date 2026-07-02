@@ -74,7 +74,7 @@ export default function Home() {
         </div>
 
         {/* ── О КОМПАНИИ ── */}
-        <div className="company-block page-section" style={{ borderRadius: 14, border: "1px solid #9d9d9d", overflow: "hidden" }}>
+        <div className="trade-in-block page-section">
           <div style={{ padding: "48px 32px", background: "#e8e8e8", flex: 1 }}>
             <div style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#bbb", marginBottom: 12 }}>О компании</div>
             <h2 style={{ fontSize: 36, fontWeight: 600, letterSpacing: "-0.02em", color: "#0d0d0d", marginBottom: 20 }}>applebar</h2>
